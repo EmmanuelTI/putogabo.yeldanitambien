@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard de Ventas</title>
+</head>
+
+<body>
+
+    <div class="top-container">
+
+        <div class="nav">
+            <div class="logo">
+                <i class='bx bxs-store'></i>
+                <a href="#">SalesVision</a>
+            </div>
+
+
+
+            <div class="right-section">
+
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Buscar..." />
+                 
+                </div>
+
+
+
+                <div class="profile" id="profileDropdown">
+                    <div class="info">
+                        <img src="assets/profile.png" alt="profile" />
+                        <div>
+                            <a href="#" id="profileName">Nombre Usuario</a>
+                            <p id="profileRole">Rol Usuario</p>
+                        </div>
+
+                    </div>
+                    <i class='bx bx-chevron-down'></i>
+
+                    <div class="dropdown">
+                        <a href="#">Perfil</a>
+                        <a href="#">Configuración</a>
+                        <a href="#" id="logoutBtn">Cerrar sesión</a>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="status">
+            <div class="header">
+                <h4 id="big">Resumen de Ventas</h4>
+                <h4 id="small">Actividad Semanal</h4>
+            </div>
+
+            <div class="items-list">
+                <div class="item">
+                    <div class="info">
+                        <div>
+                            <h5>Ingresos Totales</h5>
+                            <p>- $35,200 MXN esta semana</p>
+                            <p>- Meta: $50,000 MXN</p>
+                        </div>
+                        <i class='bx bx-line-chart'></i>
+                    </div>
+                    <div class="progress">
+                        <div class="bar" style="width:70%"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="info">
+                        <div>
+                            <h5>Unidades Vendidas</h5>
+                            <p>- 420 esta semana</p>
+                            <p>- Meta: 600</p>
+                        </div>
+                        <i class='bx bx-package'></i>
+                    </div>
+                    <div class="progress">
+                        <div class="bar" style="width:60%"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="info">
+                        <div>
+                            <h5>Nuevos Clientes</h5>
+                            <p>- 25 esta semana</p>
+                            <p>- Meta: 40</p>
+                        </div>
+                        <i class='bx bx-user-plus'></i>
+                    </div>
+                    <div class="progress">
+                        <div class="bar" style="width:62%"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <canvas class="activity-chart"></canvas>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="bottom-container">
+
+        <div class="prog-status">
+            <div class="header">
+                <h4>Desempeño de Ventas</h4>
+                <div class="tabs">
+                    <a href="#" class="active">1Y</a>
+                    <a href="#">6M</a>
+                    <a href="#">3M</a>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="item">
+                    <h2>$420K</h2>
+                    <p>Ingresos Totales Año</p>
+                </div>
+                <div class="separator"></div>
+                <div class="item">
+                    <h2>$390K</h2>
+                    <p>Meta Anual</p>
+                </div>
+            </div>
+
+            <canvas class="prog-chart"></canvas>
+
+        </div>
+
+        <div class="popular">
+            <div class="header">
+                <h4>Producto Más Vendido</h4>
+                <a href="#"># Ventas</a>
+            </div>
+
+            <img src="assets/product.jpg">
+            <div class="audio">
+                <i class='bx bx-star'></i>
+                <a href="#">Smartwatch Pro X</a>
+            </div>
+            <p>El producto más vendido del mes, con más de 1,200 unidades.</p>
+            <div class="listen">
+                <div class="author">
+                    <img src="assets/profile.png">
+                    <div>
+                        <a href="#">Equipo Ventas</a>
+                        <p>Departamento Comercial</p>
+                    </div>
+                </div>
+                <button>Ver Detalles<i class='bx bx-right-arrow-alt'></i></button>
+            </div>
+
+        </div>
+
+
+        <div class="upcoming">
+
+            <div class="header">
+                <h4>Eventos Comerciales</h4>
+                <a href="#">Agosto <i class='bx bx-chevron-down'></i></a>
+            </div>
+
+            <div class="dates">
+                <div class="item">
+                    <h5>Mo</h5>
+                    <a href="#">12</a>
+                </div>
+                <div class="item active">
+                    <h5>Tu</h5>
+                    <a href="#">13</a>
+                </div>
+                <div class="item">
+                    <h5>We</h5>
+                    <a href="#">14</a>
+                </div>
+                <div class="item">
+                    <h5>Th</h5>
+                    <a href="#">15</a>
+                </div>
+                <div class="item">
+                    <h5>Fr</h5>
+                    <a href="#">16</a>
+                </div>
+                <div class="item">
+                    <h5>Sa</h5>
+                    <a href="#">17</a>
+                </div>
+                <div class="item">
+                    <h5>Su</h5>
+                    <a href="#">18</a>
+                </div>
+            </div>
+
+            <div class="events">
+                <div class="item">
+                    <div>
+                        <i class='bx bx-time'></i>
+                        <div class="event-info">
+                            <a href="#">Lanzamiento Nuevo Producto</a>
+                            <p>10:00-12:00</p>
+                        </div>
+                    </div>
+                    <i class='bx bx-dots-horizontal-rounded'></i>
+                </div>
+                <div class="item">
+                    <div>
+                        <i class='bx bx-time'></i>
+                        <div class="event-info">
+                            <a href="#">Capacitación de Ventas</a>
+                            <p>14:00-16:00</p>
+                        </div>
+                    </div>
+                    <i class='bx bx-dots-horizontal-rounded'></i>
+                </div>
+                <div class="item">
+                    <div>
+                        <i class='bx bx-time'></i>
+                        <div class="event-info">
+                            <a href="#">Reunión con Clientes VIP</a>
+                            <p>11:30-13:00</p>
+                        </div>
+                    </div>
+                    <i class='bx bx-dots-horizontal-rounded'></i>
+                </div>
+                <div class="item">
+                    <div>
+                        <i class='bx bx-time'></i>
+                        <div class="event-info">
+                            <a href="#">Análisis Trimestral</a>
+                            <p>10:00-11:30</p>
+                        </div>
+                    </div>
+                    <i class='bx bx-dots-horizontal-rounded'></i>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="script.js"></script>
+    <script src="logout.js"></script>
+
+</body>
+
+</html>
