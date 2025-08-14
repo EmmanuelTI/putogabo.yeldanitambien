@@ -37,6 +37,14 @@ async function fetchMetricByKey(queryKey) {
 
     if (!data.datos || data.datos.length === 0) return 0;
 
+    // Si el tipo es promedio_dias_envio, dibujamos gráfica
+    if (data.tipo === "promedio_dias_envio") {
+        drawDiasEnvioChart(data.datos);
+        // En este caso, podrías devolver el promedio
+        const promedio = data.datos.reduce((acc, obj) => acc + obj.DiasParaEnvio, 0) / data.datos.length;
+        return promedio;
+    }
+
     const row = data.datos[0];
 
     switch (queryKey) {
@@ -51,6 +59,43 @@ async function fetchMetricByKey(queryKey) {
     }
 }
 
+function drawDiasEnvioChart(datos) {
+    const ctx = document.getElementById("diasEnvioChart").getContext("2d");
+
+    // Extraemos datos
+    const labels = datos.map(d => d.SalesOrderID);
+    const values = datos.map(d => d.DiasParaEnvio);
+
+    new Chart(ctx, {
+        type: "bar",
+        data: {
+            labels: labels,
+            datasets: [{
+                label: "Días para Envío",
+                data: values,
+                backgroundColor: "rgba(54, 162, 235, 0.6)",
+                borderColor: "rgba(54, 162, 235, 1)",
+                borderWidth: 1
+            }]
+        },
+        options: {
+            indexAxis: 'y', // barras horizontales
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: true },
+                title: {
+                    display: true,
+                    text: "Días para Envío por Orden"
+                }
+            },
+            scales: {
+                x: { beginAtZero: true }
+            }
+        }
+    });
+}
+
 // Configuración de items
 const metrics = [
     {
@@ -58,7 +103,7 @@ const metrics = [
         queryKey: "promedio_valor_pedido",
         icon: "bx-line-chart",
         isCurrency: true
-    },  
+    },
     {
         title: "Total de Ventas por Año",
         queryKey: "ventas_por_anio",
@@ -70,8 +115,15 @@ const metrics = [
         queryKey: "nuevos_clientes_ultimo_ano",
         icon: "bx-user-plus",
         isCurrency: false
+    },
+    {
+        title: "Promedio de Días para Envío",
+        queryKey: "promedio_dias_envio",
+        icon: "bx-time-five",
+        isCurrency: false
     }
 ];
+
 
 // Render inicial con estado "Cargando..."
 (function initializeItems() {

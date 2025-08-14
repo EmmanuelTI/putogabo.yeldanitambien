@@ -662,3 +662,9 @@ body{
     color: white;
     font-size: 18px;
 }
+
+#diasEnvioChart {
+    width: 100%;
+    height: 300px;
+}
+
