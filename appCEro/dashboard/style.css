@@ -181,7 +181,7 @@ body{
 
 .top-container .status .items-list{
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 14px;
 }
 
@@ -192,6 +192,10 @@ body{
     border-radius: 18px;
 }
 
+.top-container .status .items-list .item:nth-child(1){
+    background: #e0f2fe;
+}
+
 .top-container .status .items-list .item:nth-child(2){
     background: #fffbeb;
 }
@@ -199,17 +203,15 @@ body{
 .top-container .status .items-list .item:nth-child(3){
     background: #bfdbfe;
 }
-
 .top-container .status .items-list .item:nth-child(4){
     background: #031224;
     padding: 10px;
 }
-
 .top-container .status .items-list .item .info{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .top-container .status .items-list .item .info h5{
@@ -231,53 +233,7 @@ body{
     border-radius: 50%;
 }
 
-.top-container .status .items-list .item .progress{
-    position: relative;
-    height: 10px;
-    background: #b7c0cd;
-    border-radius: 10px;
-}
 
-.top-container .status .items-list .item .progress .bar{
-    width: 92%;
-    height: 10px;
-    background: #031224;
-    border-radius: 10px;
-}
-
-.top-container .status .items-list .item .progress::before{
-    content: "92%";
-    position: absolute;
-    top: -40px;
-    right: 0;
-    font-size: 22px;
-    font-weight: 600;
-}
-
-.top-container .status .items-list .item:nth-child(2) .progress{
-    background: #d6d3d1;
-}
-
-.top-container .status .items-list .item:nth-child(2) .progress .bar{
-    width: 65%;
-}
-
-.top-container .status .items-list .item:nth-child(2) .progress::before{
-    content: "65%";
-}
-
-
-.top-container .status .items-list .item:nth-child(3) .progress{
-    background: #94a3b8;
-}
-
-.top-container .status .items-list .item:nth-child(3) .progress .bar{
-    width: 80%;
-}
-
-.top-container .status .items-list .item:nth-child(3) .progress::before{
-    content: "80%";
-}
 
 .bottom-container{
     display: flex;

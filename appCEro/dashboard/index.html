@@ -53,57 +53,15 @@
 
         </div>
 
-        <div class="status">
+         <div class="status">
             <div class="header">
                 <h4 id="big">Resumen de Ventas</h4>
                 <h4 id="small">Actividad Semanal</h4>
             </div>
-
-            <div class="items-list">
-                <div class="item">
-                    <div class="info">
-                        <div>
-                            <h5>Ingresos Totales</h5>
-                            <p>- $35,200 MXN esta semana</p>
-                            <p>- Meta: $50,000 MXN</p>
-                        </div>
-                        <i class='bx bx-line-chart'></i>
-                    </div>
-                    <div class="progress">
-                        <div class="bar" style="width:70%"></div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="info">
-                        <div>
-                            <h5>Unidades Vendidas</h5>
-                            <p>- 420 esta semana</p>
-                            <p>- Meta: 600</p>
-                        </div>
-                        <i class='bx bx-package'></i>
-                    </div>
-                    <div class="progress">
-                        <div class="bar" style="width:60%"></div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="info">
-                        <div>
-                            <h5>Nuevos Clientes</h5>
-                            <p>- 25 esta semana</p>
-                            <p>- Meta: 40</p>
-                        </div>
-                        <i class='bx bx-user-plus'></i>
-                    </div>
-                    <div class="progress">
-                        <div class="bar" style="width:62%"></div>
-                    </div>
-                </div>
-                <div class="item">
-                    <canvas class="activity-chart"></canvas>
-                </div>
+        
+            <div class="items-list" id="items-container">
+                <!-- Aquí se insertarán los items con JavaScript -->
             </div>
-
         </div>
 
     </div>
@@ -251,6 +209,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script src="script.js"></script>
+    <script src="./scripts/items_card.js"></script>
     <script src="logout.js"></script>
 
 </body>
