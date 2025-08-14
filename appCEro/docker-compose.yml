@@ -5,9 +5,9 @@ services:
     build: .
     container_name: login_app
     ports:
-      - "3000:3000"
+      - "3274:3274"
     environment:
-      - PORT=3000
+      - PORT=3274
       - MONGO_URI=mongodb://root:123456@mongodb:27017/api_login?authSource=admin
       - JWT_SECRET=supersecretkey
     volumes:
