@@ -668,3 +668,122 @@ body{
     height: 300px;
 }
 
+
+/* Predictive Analysis Styles */
+.predictive-search {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+#predictiveInput {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#askPredictiveBtn {
+    background: #4e73df;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0 12px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#askPredictiveBtn:hover {
+    background: #2e59d9;
+}
+
+.predictive-results {
+    margin-top: 16px;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 16px;
+}
+
+.tab-btn {
+    padding: 8px 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #666;
+}
+
+.tab-btn.active {
+    color: #4e73df;
+    border-bottom: 2px solid #4e73df;
+}
+
+.tab-content {
+    display: none;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.chart-container {
+    height: 200px;
+    margin-bottom: 16px;
+}
+
+.insights, .strategies {
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#churnTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#churnTable th, #churnTable td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#churnTable tr:hover {
+    background: #f5f5f5;
+}
+
+.risk-high {
+    color: #e74a3b;
+    font-weight: bold;
+}
+
+.risk-medium {
+    color: #f6c23e;
+    font-weight: bold;
+}
+
+.risk-low {
+    color: #1cc88a;
+    font-weight: bold;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.product-card {
+    background: white;
+    padding: 12px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

@@ -109,6 +109,7 @@
         </div>
 
 
+        <!-- Reemplaza esta sección -->
         <div class="upcoming">
             <div class="header">
                 <h4>Eventos Comerciales</h4>
@@ -139,16 +140,73 @@
                     <h5>Su</h5><a href="#">18</a>
                 </div>
             </div>
-
+            <!-- AQUI QUIERO QUE AGREGUES LO NUEVO DE LAS CCONSULTAS QUE TE PASO PERO QUE EL USUARIO TENGA QUE PEDIRLAS -->
             <!-- Contenedor de eventos, será llenado dinámicamente -->
-            <div class="events"></div>
+            <div class="customers">
+                <div class="events"></div>
+            </div>
+
+            <div class="">
+                <div class="header">
+                    <h4>Análisis Predictivo</h4>
+                    <div class="predictive-search">
+                        <input type="text" id="predictiveInput" placeholder="Pregunta por predicciones..." />
+                        <button id="askPredictiveBtn"><i class='bx bx-send'></i></button>
+                    </div>
+                </div>
+
+                <div class="predictive-results">
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="sales">Ventas</button>
+                        <button class="tab-btn" data-tab="customers">Clientes</button>
+                        <button class="tab-btn" data-tab="products">Productos</button>
+                    </div>
+
+                    <div class="tab-content active" id="sales-tab">
+                        <div class="chart-container">
+                            <canvas id="salesPredictionChart"></canvas>
+                        </div>
+                        <div class="insights" id="salesInsights"></div>
+                    </div>
+
+                    <div class="tab-content" id="customers-tab">
+                        <div class="table-container">
+                            <table id="churnTable">
+                                <thead>
+                                    <tr>
+                                        <th>Cliente</th>
+                                        <th>Última Compra</th>
+                                        <th>Riesgo</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                        <div class="strategies" id="retentionStrategies"></div>
+                    </div>
+
+                    <div class="tab-content" id="products-tab">
+                        <div class="chart-container">
+                            <canvas id="trendingProductsChart"></canvas>
+                        </div>
+                        <div class="product-list" id="trendingProductsList"></div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- Por esta nueva versión: -->
+        <!-- <div class="upcoming">
+            
+        </div> -->
 
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./scripts/dashboard_metrics.js"></script>
     <script src="script.js"></script>
+    <script src="./scripts/predictive.js"></script>
     <script src="./scripts/items_card.js"></script>
     <script src="logout.js"></script>
 
